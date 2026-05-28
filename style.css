@@ -1,0 +1,738 @@
+/* =========================================
+   SUMÁRIO:
+   1. GERAL & RESET
+   2. CABEÇALHO & NAVEGAÇÃO
+   3. ESTRUTURA PRINCIPAL
+   4. SEÇÃO: INÍCIO
+   5. SEÇÃO: ÁREAS DE ATUAÇÃO
+   6. SEÇÃO: SOBRE MIM
+   7. SEÇÃO: EXPERIÊNCIA PROFISSIONAL
+   8. SEÇÃO: ABORDAGEM
+   9. SEÇÃO: FAQ (DÚVIDAS)
+   10. SEÇÃO: CONTATO
+   11. ELEMENTOS FLUTUANTES (WHATSAPP)
+   12. ANIMAÇÕES
+   13. RESPONSIVIDADE (MEDIA QUERIES)
+========================================= */
+
+/* =========================================
+   1. GERAL & RESET
+========================================= */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px; /* Garante que os títulos não fiquem escondidos pelo menu */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   2. CABEÇALHO & NAVEGAÇÃO
+========================================= */
+
+/* =========================================
+   2. CABEÇALHO & NAVEGAÇÃO
+========================================= */
+header {
+  display: flex;
+}
+
+nav {
+  background: rgba(160, 74, 58);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* NOVO: Alinha perfeitamente o nome e os botões ao centro vertical */
+  position: fixed;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.nav .nome {
+  margin-right: auto;
+  color: white;
+  padding-left: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  white-space: nowrap; /* NOVO: Impede que o nome seja esmagado em duas linhas */
+}
+
+ul {
+  list-style: none;
+}
+
+/* NOVO: Container Flex para abraçar os links do menu */
+.ul {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Define um espaço seguro entre os botões */
+}
+
+ul li {
+  /* O antigo 'float: left' FOI APAGADO AQUI */
+  padding: 15px 10px; /* Reduzimos um pouquinho a margem lateral para caber em telas divididas */
+  font-size: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  white-space: nowrap; /* NOVO: Garante que "Agendar Consulta" não pule de linha sozinho */
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li:hover {
+  background: rgb(0, 0, 0, 0.3);
+}
+
+nav ul li:last-child {
+  background: rgb(124, 61, 6); /* Botão de Agendar no Menu */
+}
+
+/* Menu Hambúrguer Escondido no Desktop */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* =========================================
+   3. ESTRUTURA PRINCIPAL
+========================================= */
+#section {
+  padding-top: 53.2px; 
+}
+
+/* =========================================
+   4. SEÇÃO: INÍCIO
+========================================= */
+#section .inicio {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(128, 128, 128, 0.152);
+  display: flex;
+  border-bottom: rgb(155, 151, 151) solid 1px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+#section .inicio .texto1 {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  color: rgb(188, 103, 103);
+  margin: 0;
+}
+
+.subtexto1 {
+  color: rgb(143, 59, 59);
+  margin-top: 120px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.subtexto1 li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#section .inicio .foto1 {
+  width: 500px;
+  max-width: 100%;
+  height: 500px;
+  background: white;
+  background-image: url(/img/DSC_3112.jpg);
+  background-size: cover;
+  box-shadow: 5px 5px 10px gray;
+  z-index: 1;
+}
+
+#section .inicio .foto1:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* =========================================
+   5. SEÇÃO: ÁREAS DE ATUAÇÃO
+========================================= */
+#section #atuacao {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+}
+
+#section #atuacao header {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(188, 103, 103);
+  text-align: center;
+}
+
+#section #atuacao header h1 {
+  color: rgb(188, 103, 103);
+}
+
+#section #atuacao ul {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section #atuacao ul li {
+  background: #ffffff; 
+  border: 1px solid rgba(155, 151, 151, 0.3); 
+  padding: 15px 25px; 
+  border-radius: 50px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03); 
+  text-align: center; 
+  font-size: 18px; 
+  font-weight: 500; 
+  margin: 0 auto 15px auto; 
+  color: #444; 
+  width: 100%; 
+  max-width: 1296px;
+  display: inline-block; 
+  transition: all 0.3s ease; 
+  cursor: pointer;
+}
+
+#section #atuacao ul li:hover {
+  background: #B35A44; 
+  color: #ffffff; 
+  transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(179, 90, 68, 0.2); 
+  border-color: rgb(160, 74, 58); 
+}
+
+.questao {
+  background: rgba(128, 128, 128, 0.152);
+  max-width: 1296px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  border: rgb(155, 151, 151) solid 1px;
+  text-align: center;
+}
+
+.questao h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.questao p {
+  font-size: 20px;
+  color: rgb(188, 103, 103);
+  font-family: 'Poppins', sans-serif;
+}
+
+.questao .button {
+  background: hsl(5, 78%, 35%, 0.85);
+  font-size: 20px;
+  color: white;
+  width: 200px;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =========================================
+   6. SEÇÃO: SOBRE MIM
+========================================= */
+#section #sobre {
+  width: 90%;
+  max-width: 1296px;
+  min-height: 700px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  border: 1px solid rgb(155, 151, 151);
+  font-family: 'Poppins', sans-serif;
+  background: rgba(128, 128, 128, 0.152);
+}
+
+#section #sobre .texto2 {
+  width: 600px;
+  max-width: 100%;
+  color: rgb(188, 103, 103);
+  margin-top: 30px;
+}
+
+#section #sobre .texto2 p {
+  text-align: justify;
+  text-indent: 50px; 
+  hyphens: auto;
+}
+
+#section #sobre .foto2 {
+  width: 500px;
+  max-width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  animation: trocarImagem 10s infinite;
+  margin-top: 30px;
+}
+
+/* =========================================
+   7. SEÇÃO: EXPERIÊNCIA PROFISSIONAL
+========================================= */
+#section #experiencia {
+  width: 90%;
+  max-width: 1296px;
+  min-height: 700px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid rgb(155, 151, 151);
+  font-family: 'Poppins', sans-serif;
+  background: rgba(128, 128, 128, 0.152);
+}
+
+#section #experiencia header .tituloexperiencia {
+  color: rgb(188, 103, 103);
+  font-family: 'Poppins', sans-serif;
+  margin: 30px auto;
+}
+
+#section #experiencia .containerexperiencia {
+  margin: 100px auto;
+  flex-direction: row;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+.topo-card {
+  display: flex;
+  align-items: center;  
+  justify-content: flex-start; 
+  gap: 12px;             
+  width: 100%;
+  margin-bottom: 20px;   
+}
+
+.topo-card img {
+  flex-shrink: 0;        
+  object-fit: contain;
+}
+
+.tituloexperiencia2 {
+  color: #B35A44;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  margin: 0;             
+  text-align: left;      
+  line-height: 1.2;      
+}
+
+.experiencia1, .experiencia2, .experiencia3, .experiencia4 {
+  width: 300px;
+  height: 350px; 
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(155, 151, 151, 0.3); 
+  border-top: 5px solid #B35A44;            
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.experiencia1 p, .experiencia2 p, .experiencia3 p, .experiencia4 p {
+  color: #666;           
+  font-size: 14px;
+  line-height: 1.6;      
+  margin-top: 15px;
+  text-align: justify; 
+  hyphens: auto;       
+}
+
+.experiencia1:hover, 
+.experiencia2:hover, 
+.experiencia3:hover, 
+.experiencia4:hover {
+  transform: scale(1.1); 
+  border-color: #B35A44; 
+  box-shadow: 0 10px 20px rgba(188, 103, 103, 0.4); 
+  background: rgba(128, 128, 128, 0.2); 
+  z-index: 10; 
+}
+
+/* =========================================
+   8. SEÇÃO: ABORDAGEM
+========================================= */
+#section #abordagem {
+  width: 100%;
+  min-height: 80vh;
+  background: white; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+#section #abordagem header h1 {
+  color: rgb(188, 103, 103);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 50px;
+}
+
+.container-abordagem {
+  max-width: 800px; 
+  text-align: center;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(155, 151, 151, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.container-abordagem h2 {
+  color: #B35A44;
+  font-family: 'Poppins', sans-serif;
+  margin: 20px 0;
+}
+
+.container-abordagem p {
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* =========================================
+   9. SEÇÃO: FAQ (DÚVIDAS)
+========================================= */
+#section #faq {
+  width: 100%;
+  padding: 80px 20px;
+  background: rgba(128, 128, 128, 0.152);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section #faq header h1 {
+  color: rgb(188, 103, 103);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+details {
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(155, 151, 151, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+summary {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  list-style: none; /* Esconde a seta padrão */
+  position: relative;
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Esconde a seta no Safari/Chrome */
+}
+
+summary::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 24px;
+  color: #B35A44;
+  font-weight: bold;
+}
+
+details[open] summary::after {
+  content: '-';
+}
+
+details p {
+  padding: 0 20px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* =========================================
+   10. SEÇÃO: CONTATO
+========================================= */
+#section #contato {
+  width: 100%;
+  padding: 100px 20px;
+  background: #B35A44; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#section #contato header h1 {
+  font-family: 'Poppins', sans-serif;
+  color: white; 
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.texto-contato {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.botoes-contato {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-principal, .btn-secundario {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-principal {
+  background: #25D366; 
+  color: white;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-principal:hover {
+  background: #1EBE5C;
+  transform: translateY(-3px);
+}
+
+.btn-secundario {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secundario:hover {
+  background: white;
+  color: #B35A44;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   11. ELEMENTOS FLUTUANTES (WHATSAPP)
+========================================= */
+.wpp {
+  z-index: 1;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+/* =========================================
+   12. ANIMAÇÕES
+========================================= */
+@keyframes trocarImagem {
+  0% { background-image: url("/img/DSC_3316.jpg"); }
+  33% { background-image: url("/img/DSC_3213.jpg"); }
+  66% { background-image: url("/img/DSC_3257.jpg"); }
+  100% { background-image: url("/img/DSC_3389.jpg"); }
+}
+/* =========================================
+   13. RESPONSIVIDADE (MEDIA QUERIES)
+========================================= */
+
+/* --- MOBILE (Até 767px) --- */
+@media (max-width: 767px) {
+  nav {
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start; /* Mantém o nome na esquerda */
+  }
+
+  .menu-toggle {
+    display: flex; /* Exibe o ícone hambúrguer */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  .ul {
+    display: none; /* Esconde o menu por padrão */
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .ul.ativo {
+    display: flex; /* Mostra quando o JavaScript adicionar a classe */
+  }
+
+  ul li {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  #section .inicio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #section .inicio .texto1,
+  #section .inicio .foto1 {
+    width: 90%;
+  }
+
+  #section .inicio .foto1 {
+    height: 300px;
+  }
+
+  .subtexto1 {
+    margin-top: 40px;
+  }
+
+  #section #atuacao ul li {
+    margin: 10px 20px;
+  }
+
+  .questao {
+    width: 90%;
+  }
+
+  #section #sobre {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #section #sobre .foto2 {
+    height: 300px;
+  }
+
+  #section #experiencia {
+    margin: 20px auto; 
+    padding: 15px;
+  }
+
+  #section #experiencia .containerexperiencia {
+    flex-direction: column; 
+    align-items: center;
+    margin: 40px auto; 
+    gap: 25px; 
+  }
+
+  .experiencia1, .experiencia2, .experiencia3, .experiencia4 {
+    width: 100%; 
+    max-width: 320px; 
+    height: auto; 
+    min-height: 300px;
+    margin-bottom: 0; 
+  }
+
+  #section #abordagem {
+    padding: 50px 15px;
+  }
+  
+  .container-abordagem {
+    padding: 30px 20px;
+  }
+
+  .botoes-contato {
+    flex-direction: column; 
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .btn-principal, .btn-secundario {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* --- TABLET (De 768px até 1023px) --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    padding: 0 40px;
+  }
+  #section .inicio {
+    flex-direction: column;
+  }
+  #section .inicio .texto1,
+  #section .inicio .foto1 {
+    width: 80%;
+  }
+  #section .inicio .foto1 {
+    height: 400px;
+  }
+  #section #sobre {
+    flex-direction: column;
+  }
+  #section #sobre .foto2 {
+    height: 400px;
+  }
+  #section #experiencia .containerexperiencia {
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin: 60px auto;
+    gap: 30px;
+  }
+  .experiencia1, .experiencia2, .experiencia3, .experiencia4 {
+    width: 45%; 
+    max-width: 300px; 
+    height: auto;
+    min-height: 350px;
+    margin-bottom: 0; 
+  }
+}
+
+/* --- DESKTOP GRANDE (1400px em diante) --- */
+@media (min-width: 1400px) {
+  #section .inicio {
+    gap: 80px;
+  }
+}
