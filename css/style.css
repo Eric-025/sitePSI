@@ -309,14 +309,16 @@ nav ul li:last-child {
 }
 #section #experiencia header {
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Força o Flexbox a centralizar o conteúdo horizontalmente */
+  align-items: center;
 }
+
 #section #experiencia header .tituloexperiencia {
   color: rgb(188, 103, 103);
   font-family: 'Poppins', sans-serif;
   margin: 30px auto;
-  text-align: center; /* Garante que o texto fique no meio */
-  width: 100%; /* Garante que ele ocupe todo o espaço disponível para poder centralizar */
+  text-align: center;
 }
 
 #section #experiencia .containerexperiencia {
