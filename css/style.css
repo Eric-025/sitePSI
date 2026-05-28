@@ -655,8 +655,9 @@ details p {
     width: 100%;
   }
 
-  #section #sobre .foto2 {
+ #section #sobre .foto2 {
     height: 300px;
+    background-position: center top; /* Garante que o rosto no topo nunca seja cortado */
   }
 
   #section #experiencia {
